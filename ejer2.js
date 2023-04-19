@@ -55,7 +55,7 @@ switch (ejercicio) {
         document.write(num2)
     break;
 
-    case 5:
+    case "5":
         
         var num1 = parseInt(prompt("Dime un numero"));
         var num2 = parseInt(prompt("Dime un numero"));
@@ -64,14 +64,15 @@ switch (ejercicio) {
         max = 0;
         min = 999999999999999;
         for (index = 0; index < numeros.length; index++) {
-            
-            
+            if (numeros[index] > max) {
+                max = numeros[index];
+            }
+            if(numeros[index] < min){
+                min = numeros[index];
+            }
         }
-        
-
-      
-
-
+        document.write(max)
+        document.write(min)
 
     break;
     default:

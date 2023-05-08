@@ -119,6 +119,32 @@ switch (ejercicio) {
                 }
             } while (num1 != 999);
     break;
+
+    case "8":
+
+    break;
+
+    case "9":
+            var entrada = parseInt(prompt("Elige la moneda: El 1 es en euros el 2 dolar el 3 libra"));
+            var salida = parseInt(prompt("A que quieres convertirlo: 1 euros 2 dolar 3 libra "));                 
+            //euro
+            var num1;
+            //dolar
+            var num2;
+            //libra
+            var num3;
+            num1 = parseInt(prompt("Dime la cantidad"));
+            if (entrada = 1) {
+                if (salida = 2) {
+                    num2 = num1 + (num1 * 0.11);
+                    document.write("En dolar son: " + num2 + "<br>"); 
+                }
+                else if(salida = 3){
+                    num3 = num1 * 0.84; 
+                    document.write("En libra son: " + num3 + "<br>");
+                } 
+            }
+    break;
     default:
         break;
 }

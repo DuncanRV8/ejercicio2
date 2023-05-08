@@ -80,25 +80,32 @@ switch (ejercicio) {
         max = 0;
         min = 999999999999999;
         var numeros = [];
+        var continuar = true;
+
         do {
-            var num = parseInt(prompt("Dime un número positivo"));
-            numeros[contador] = num;
-            contador++;
-
-        } while (num > 0);
-
-        for (let index = 0; idex < numero.length; index++) {
-            if (numero[index] > max) {
-                max = numero[index];
+            var num1 = parseInt(prompt("Dime un numero"));
+            if (num1 > 0) {
+               numeros[contador] = num1;
+               contador++;
+            }
+            else{
+                continuar = false;
             }
 
-            if (numero[index] < min) {
-                min = numero[index];
+           
+        } while (continuar != false);
+        for (let index = 0; index < numeros.length; index++) {
+            if (numeros[index] > max) {
+                max = numeros[index];
             }
-
-            document.write(numeros[index])
+            if (numeros[index] < min) {
+                min = numeros[index];
+            }
         }
-        document.write("El número máximo es: " + max + " <br> " + "El número mínimo es: " + min);
+        document.write("El numero maximo es: " + max + "<br>" + "El numero minimo es: " + min + "<br>");
+        for (let index = 0; index < numeros.length; index++) {
+            document.write(numeros[index] + " ");
+        }
         
     break;
     default:

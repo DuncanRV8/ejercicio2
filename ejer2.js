@@ -71,9 +71,35 @@ switch (ejercicio) {
                 min = numeros[index];
             }
         }
-        document.write(max)
-        document.write(min)
+        document.write("El número máximo es: " + max + " <br> " + "El número mínimo es: " +  min)
 
+    break;
+
+    case "6":
+        contador = 0;
+        max = 0;
+        min = 999999999999999;
+        var numeros = [];
+        do {
+            var num = parseInt(prompt("Dime un número positivo"));
+            numeros[contador] = num;
+            contador++;
+
+        } while (num > 0);
+
+        for (let index = 0; idex < numero.length; index++) {
+            if (numero[index] > max) {
+                max = numero[index];
+            }
+
+            if (numero[index] < min) {
+                min = numero[index];
+            }
+
+            document.write(numeros[index])
+        }
+        document.write("El número máximo es: " + max + " <br> " + "El número mínimo es: " + min);
+        
     break;
     default:
         break;

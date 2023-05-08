@@ -92,7 +92,6 @@ switch (ejercicio) {
                 continuar = false;
             }
 
-           
         } while (continuar != false);
         for (let index = 0; index < numeros.length; index++) {
             if (numeros[index] > max) {
@@ -107,6 +106,18 @@ switch (ejercicio) {
             document.write(numeros[index] + " ");
         }
         
+    break;
+
+    case "7":
+        var continuar = true;
+        var num2;
+            do {
+                var num1 = parseInt(prompt("Dime los grados Farenhit"));
+                if (num1 < 999) {
+                    num2 = 5 / 9 * (num1  - 32);
+                    document.write("El numero en Farenhit es: " + num1 + " " + "El número en Celsius " + num2 + "<br>");
+                }
+            } while (num1 != 999);
     break;
     default:
         break;

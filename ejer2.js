@@ -121,29 +121,97 @@ switch (ejercicio) {
     break;
 
     case "8":
+        var kilometros = parseInt(prompt("Dime cuantos kilometros/horas"));
+        var segundos = parseInt(prompt("Dime cuantos segundos"));
+
+        let metros = kilometros * 1000 / 3600;
+
+        let distancia = metros * segundos;
+
+        document.write("La distancia recorrida en metros/segundos es: " + distancia);
 
     break;
 
     case "9":
-            var entrada = parseInt(prompt("Elige la moneda: El 1 es en euros el 2 dolar el 3 libra"));
-            var salida = parseInt(prompt("A que quieres convertirlo: 1 euros 2 dolar 3 libra "));                 
-            //euro
-            var num1;
-            //dolar
-            var num2;
-            //libra
-            var num3;
-            num1 = parseInt(prompt("Dime la cantidad"));
-            if (entrada = 1) {
-                if (salida = 2) {
-                    num2 = num1 + (num1 * 0.11);
-                    document.write("En dolar son: " + num2 + "<br>"); 
-                }
-                else if(salida = 3){
-                    num3 = num1 * 0.84; 
-                    document.write("En libra son: " + num3 + "<br>");
-                } 
+        var num1 = parseInt(prompt("Dime la cantidad"));
+        var entrada = parseInt(prompt("Elige la moneda: El 1 es en euros el 2 dolar el 3 libra"));
+        var salida = parseInt(prompt("A que quieres convertirlo: 1 euros 2 dolar 3 libra "));                 
+        if (entrada == 1 && salida == 2) {
+            //De euro a dolares 
+            num1 = num1 + (num1 * 0.11);
+            document.write("En dolares es: " + num1);
+        }
+        else if(entrada == 1 && salida == 3){
+            //De euros a libra
+            num1 = num1 -  (num1 * 0.16);
+            document.write("En libra es: " + num1);
+        }
+        if (entrada == 2 && salida == 1) {
+            //De dolares a euros
+            num1 = num1 - (num1 * 0.11);
+            document.write("En euros es: " + num1);
+        }
+        else if(entrada == 2 && salida == 3){
+            //De dolar a libra
+            num1 = num1 - (num1 * 0.24);
+            document.write("En libra es: " + num1);
+        }
+        if (entrada == 3 && salida == 1) {
+            //De libra a euros
+            num1 = num1 + (num1 * 0.16);
+            document.write("En euros es: " + num1);
+        }
+        else if(entrada == 3 && salida == 2){
+            //De libra a dolares
+            num1 = num1 + (num1 * 0.27);
+            document.write("En dolares es: " + num1);
+        } 
+    break;
+    
+    case "10":
+        var num1 = parseInt(prompt("Dime un numero"));
+        var num2 = parseInt(prompt("Dime otro numero"));
+        let result = confirm("Ascendente ACEPTAR, Descendente CANCELAR")
+        if (result == true) {
+          for (let index = num1; index <= num2; index++) {
+            document.write(index + " ");
+            
+          }
+        }else{
+            for (let index = num2; index >= num1; index--) {
+                document.write(index + " ");
             }
+        }
+    case "11":
+        for (let index = 100; index >= 50; index--) {
+            if (index % 5 == 0 || index % 5 == 5)  {
+                document.write(index + " ");
+            }
+        }
+    break;
+        
+    case "12":
+        var multiplo = parseInt(prompt("Dime que numero quieres que sea multiplo"));
+        var num1 = parseInt(prompt("Dime un numero"));
+        var num2 = parseInt(prompt("Dime otro numero"));
+      
+        if (num1 > num2) {
+            for (let index = num1; index >= num2; index--) {
+                if (index % multiplo == 0) {
+                    document.write(index + " ");
+                }
+            }
+        }
+        else if(num1 < num2){
+            for (let index = num1; index <= num2; index++) {
+                if (index % multiplo == 0) {
+                    document.write(index + " ");
+                }
+            }
+        }
+        
+
+    break;
     break;
     default:
         break;
